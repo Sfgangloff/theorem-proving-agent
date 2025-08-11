@@ -1,0 +1,43 @@
+# ---------------------
+# Python
+# ---------------------
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+.env
+.env.*
+*.log
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# ---------------------
+# Lean + Lake
+# ---------------------
+# Build artifacts
+lake-packages
+.lake/
+*.olean
+*.ilean
+*.c
+*.o
+*.dynlib
+*.dll
+*.so
+
+# Lean cache
+*.trace
+*.tmp
+cache/
+
+# ---------------------
+# Agent scratch branches
+# ---------------------
+# If you have scratch changes or auto-generated Lean files
+agent-run-*

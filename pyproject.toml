@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lean-auto-agent"
+version = "0.2.0"
+description = "An AI-assisted Lean 4 self-repair agent with LangGraph orchestration"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "rich>=13.7",
+    "typer>=0.12.3",
+    "python-dotenv>=1.0.1",
+    "psutil>=5.9",
+    "json5>=0.9.25",
+    "langchain>=0.2.11",
+    "langgraph>=0.0.52",
+    "openai>=1.35.13"
+]
+
+[project.scripts]
+lean-agent = "lean_agent.main:app"
+lean-agent-graph = "lean_agent.langgraph_app:cli"
+
+[tool.setuptools.packages.find]
+include = ["lean_agent*"]
+exclude = ["sample_project*", "tests*", "examples*"]
